@@ -1,11 +1,16 @@
 from main import logic
 
 
-def test_logic_five():
-    assert logic(5) == "Odd 2 Odd 4 Odd"
+def test_logic_five(capfd):
+    # assert logic(5) == "Odd 2 Odd 4 Odd"
+    logic(5)
+    captured = capfd.readouterr()
+    assert captured.out == "Odd 2 Odd 4 Odd\n"
 
 
-def test_logic_ten():
+def test_logic_ten(capfd):
+    logic(10)
+    captured = capfd.readouterr()
     result = ''
     for i in range(1, 10):
         if i % 2 == 0:
@@ -13,8 +18,11 @@ def test_logic_ten():
         else:
             result += "Odd "
 
-    assert logic(10) == result.strip()
+    final = result.strip() + "\n"
+    assert captured.out == final
 
 
-def test_logic_more_than_five_oh():
-    assert logic(51) == "Max. input is 50"
+def test_logic_more_than_five_oh(capfd):
+    logic(51)
+    captured = capfd.readouterr()
+    assert captured.out == "Max. input is 50\n"
