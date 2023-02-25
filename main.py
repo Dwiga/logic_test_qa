@@ -1,7 +1,7 @@
 # This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# N adalah bilangan bulat possitive
+# N tidak boleh lebih dari 50 dengan pesan "Max. input is 50"
+# Menampilkan bilangan ganjil dengan 'Odd', sebagai contoh Odd 2 Odd 4 Odd
 
 
 def logic(param):
@@ -12,5 +12,3 @@ def logic(param):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     logic(5)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
