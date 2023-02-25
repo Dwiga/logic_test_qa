@@ -12,7 +12,7 @@ def test_logic_ten(capfd):
     logic(10)
     captured = capfd.readouterr()
     result = ''
-    for i in range(1, 10):
+    for i in range(1, 10 + 1):
         if i % 2 == 0:
             result += str(i) + " "
         else:
